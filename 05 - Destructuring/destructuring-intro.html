@@ -31,10 +31,15 @@
   };
 
   const { twitter: tweet, facebook: fb } = wes.links.social;
+  console.log(tweet);
+  console.log(fb);
 
   const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
-
+  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings; // default settings
+	
+	const {w: width2 = 400, h: height2 = 500} = {w: 800};
+	console.log(width2, height2);
+	
 </script>
 </body>
 </html>

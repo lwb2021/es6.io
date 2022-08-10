@@ -12,11 +12,15 @@
 
   const data = 'Basketball,Sports,90210,23,wes,bos,cool';
   const [itemName, category, sku, inventory] = data.split(',');
+	console.log(itemName, category, sku, inventory);
 
   const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
-
+	
+	/*
+	players is an array
+	*/
   const [captain, assistant, ...players] = team;
-
+	console.log(players, Array.isArray(players));
 </script>
 </body>
 </html>
