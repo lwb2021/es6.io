@@ -8,10 +8,10 @@
 <script>
 const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
 
-postsPromise
-  .then(data => data.json())
+postsPromise 
+  .then(data => data.json()) // succeeds - then will only run when the data come back
   .then(data => { console.log(data) })
-  .catch((err) => {
+  .catch((err) => { // fails - then catch the error
     console.error(err);
   })
 
