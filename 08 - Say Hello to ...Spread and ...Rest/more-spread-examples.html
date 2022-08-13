@@ -12,6 +12,7 @@
   </div>
 <script>
   const people = Array.from(document.querySelectorAll('.people p'));
+  // or [... document.querySelectorAll('.people p')]
   const names = people.map((person) => person.textContent );
 
   const deepDish = {

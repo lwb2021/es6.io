@@ -11,7 +11,8 @@
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 
   const pizzas = [...featured, 'veg', ...specialty];
-  const fridayPizzas = [...pizzas];
+  
+  const fridayPizzas = [...pizzas]; // deep copy
 
   const deepDish = {
     pizzaName: 'Deep Dish',
