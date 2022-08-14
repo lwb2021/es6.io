@@ -14,7 +14,10 @@
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
   };
+  
+  console.log(' classRoom ', classRoom);
 
+  // not enumerable
   for (const person in classRoom) {
     console.log(person);
   }
