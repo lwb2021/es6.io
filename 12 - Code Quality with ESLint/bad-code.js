@@ -28,3 +28,10 @@ Promise
   .then(responses => {
     console.log(responses);
   });
+
+
+/* eslint-disable no-extend-native */
+
+// Everything ignored here
+
+/* eslint-enable no-extend-native */
