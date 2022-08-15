@@ -8,7 +8,7 @@
 <script>
   function* listPeople() {
     let i = 0;
-    yield i;
+    yield i; // return until this fn is called next time
     i++;
     yield i;
     i++;
@@ -16,6 +16,8 @@
   }
 
   const people = listPeople();
+	people.next(); // returns an Object
+	people.next(); 
 
   const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879 },
