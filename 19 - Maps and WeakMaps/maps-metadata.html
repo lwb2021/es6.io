@@ -21,9 +21,8 @@
 <script>
   const clickCounts = new Map();
   const buttons = document.querySelectorAll('button');
-
   buttons.forEach(button => {
-    clickCounts.set(button, 0);
+    clickCounts.set(button, 0); // key is the button object
     button.addEventListener('click', function() {
       const val = clickCounts.get(this);
       clickCounts.set(this, val + 1);
