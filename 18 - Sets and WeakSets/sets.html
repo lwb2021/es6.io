@@ -10,6 +10,34 @@
   people.add('Wes');
   people.add('Snickers');
   people.add('Kait');
+	
+	// generator
+	const it = people.values();
+	const keys = people.keys(); // same as it
+	
+	console.log('it ', it);
+	console.log('keys ', keys);
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(keys.next());
+	console.log(keys.next());
+	console.log(keys.next());
+	console.log(keys.next());
+	
+	/*
+	it  SetIterator {'Wes', 'Snickers', 'Kait'}
+	sets.html:19 keys  SetIterator {'Wes', 'Snickers', 'Kait'}
+	sets.html:20 {value: 'Wes', done: false}
+	sets.html:21 {value: 'Snickers', done: false}
+	sets.html:22 {value: 'Kait', done: false}
+	sets.html:23 {value: undefined, done: true}
+	sets.html:24 {value: 'Wes', done: false}
+	sets.html:25 {value: 'Snickers', done: false}
+	sets.html:26 {value: 'Kait', done: false}
+	sets.html:27 {value: undefined, done: true}
+	*/
 
   for (const person of  people) {
     console.log(person);
