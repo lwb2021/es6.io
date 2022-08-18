@@ -8,7 +8,7 @@
 <script>
 
   function ajax(url) {
-    fetch(url).then(data => data.json()).then(data => dataGen.next(data))
+    fetch(url).then(data => data.json()).then(data => dataGen.next(data)) // data is stored in left-hand side variables
   }
 
   function* steps() {

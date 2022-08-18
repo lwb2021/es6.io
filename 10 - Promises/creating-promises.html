@@ -7,8 +7,9 @@
 <body>
 <script>
   const p = new Promise((resolve, reject) => {
+	// resolve("wes is cool."); 
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
+      reject(Error('Err wes isn\'t cool')); // Error shows the line number
     }, 1000);
   });
 

@@ -178,8 +178,11 @@
      }
   ];
   const code = 'VBgtGQcSf';
-  const post = posts.find(post => post.code === code);
+  // find one satisfied item
+  // filter -> an array of satisfied items
+  const post = posts.find(post => post.code === code); 
 
+	
   const postIndex = posts.findIndex(post => post.code === code);
   console.log(postIndex);
 

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>New String Methods</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>New String Methods</title>
+	</head>
+	<body>
 
-<script>
-const course = 'RFB2';
-const flightNumber = '20-AC2018-jz';
-const accountNumber = '825242631RT0001';
+		<script>
+			const course = 'RFB2';
+			const flightNumber = '20-AC2018-jz';
+			const accountNumber = '825242631RT0001';
 
-const make = 'BMW';
-const model = 'x5';
-const colour = 'Royal Blue';
+			const make = 'BMW';
+			const model = 'x5';
+			const colour = 'Royal Blue';
 
-// .startsWith()
+			// .startsWith()
+			course.startsWith('RF'); // true
 
-// .endsWith()
+			// .endsWith()
+			flightNumber.endsWith('jz'); // true
+			accountNumber.endsWith('RT', 11); // '825242631RT'
 
-// .includes()
+			// .includes()
+			flightNumber.includes('AC'); // true
 
-// .repeat()
+			// .repeat()
+			function leftPad(str, length = 20) {
+				return `→ ${' '.repeat(length - str.length)}${str}`;
+			}
 
-function leftPad(str, length = 20) {
-  return `→ ${' '.repeat(length - str.length)}${str}`;
-}
+			console.log(leftPad(make));
+			console.log(leftPad(model));
+			console.log(leftPad(colour));
+		</script>
 
-console.log(leftPad(make));
-console.log(leftPad(model));
-console.log(leftPad(colour));
-
-
-</script>
-
-</body>
+	</body>
 </html>

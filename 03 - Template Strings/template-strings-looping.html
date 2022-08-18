@@ -12,7 +12,16 @@
     { name: 'Sunny', age: 1 }
   ];
 
-  const markup = `
+  // join('') removes comma b/t items
+  let markup = `
+    <ul>
+      ${dogs.map((item) => `<li>${item.name} is </li>`).join('')}
+    </ul>
+  `;
+
+  console.log(markup);
+
+  markup = `
     <ul class="dogs">
       ${dogs.map(dog => `
         <li>

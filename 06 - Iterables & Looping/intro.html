@@ -9,8 +9,11 @@
   /* eslint-disable */
    Array.prototype.shuffle = function() {
      var i = this.length, j, temp;
+		 // console.log(this.length, j, temp);
+
      if ( i == 0 ) return this;
      while ( --i ) {
+			// console.log('i is ', i);
       j = Math.floor( Math.random() * ( i + 1 ) );
       temp = this[i];
       this[i] = this[j];
@@ -22,6 +25,8 @@
   const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 
   cuts.shop = 'MM MEats';
+	
+	cuts.shuffle();
 
   // for (let i = 0; i < cuts.length; i++) {
   //   console.log(cuts[i]);
@@ -34,9 +39,9 @@
   //   }
   // });
 
-  // for (const index in cuts) {
-  //   console.log(cuts[index]);
-  // }
+  for (const index in cuts) {
+    console.log(index);
+  }
 
   for (const cut of cuts) {
     if(cut === 'Brisket') {

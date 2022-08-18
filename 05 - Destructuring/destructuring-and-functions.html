@@ -15,12 +15,16 @@
     };
     return converted;
   }
-
+	
+	const {MEX, GPB, AUD, USD} = convertCurrency(100);
+	console.log(MEX, USD, GPB, AUD);
+	
   function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
+		console.log(total, tip, tax);
     return total + (tip * total) + (tax * total);
   }
 
-  const bill = tipCalc({ tip: 0.20, total: 200 });
+  const bill = tipCalc({ tip: 0.20, total: 200 }); // optionally pass params
   console.log(bill);
 
 </script>

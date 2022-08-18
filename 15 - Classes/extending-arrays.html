@@ -10,7 +10,9 @@
     constructor(name, ...items) {
       super(...items);
       this.name = name;
-    }
+			this.stars = undefined;
+			this.director = undefined;
+    } 
     add(movie) {
       this.push(movie);
     }
@@ -27,6 +29,11 @@
   );
 
   movies.add({ name: 'Titanic', stars: 5 });
+	
+	// index + attribute
+	for (const movie in movies) {
+		console.log(movie);
+	}
 
 </script>
 </body>

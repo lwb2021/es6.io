@@ -1,5 +1,5 @@
 // Named Export
-export const apiKey = 'abc123';
+export const apiKey = 'abc123'; // should import as apiKey
 
 export const url = 'http://wesbos.com';
 

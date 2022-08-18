@@ -32,7 +32,7 @@
 <script>
 
   // Select all the list items on the page and convert to array
-
+  
   // Filter for only the elements that contain the word 'Flexbox'
 
   // map down to a list of time strings
@@ -42,6 +42,15 @@
   // reduce to get total
 
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
+  let items = Array.from(document.querySelectorAll('li'));
+  let filteredRes = items.filter(
+    item => item.textContent.includes('Flexbox')
+    ).map(
+    item => item.dataset.time
+    ).map(
+    item => parseInt(item.split(':')[0]) * 60 + parseInt(item.split(':')[1])
+    ).reduce((prev, curr) => prev + curr, 0);
+  console.log(filteredRes);
 
 </script>
 </body>

@@ -13,8 +13,13 @@
         this.name = name;
         this.breed = breed;
       }
-      barks = 0;
+      barks = 0; // will be put inside the constructor after compilation
 
+			static = {
+				
+			};
+			
+			
       bark() {
         console.log(`Bark Bark! My name is ${this.name}`);
         this.barks = this.barks + 1;

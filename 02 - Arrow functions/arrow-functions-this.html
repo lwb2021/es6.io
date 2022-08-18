@@ -61,6 +61,21 @@
   </div>
 
   <script>
+    const box = document.querySelector('.box');
+    box.addEventListener('click', function() {
+      let first = 'opening';
+      let second = 'open';
+
+      if (this.classList.contains(first)) {
+        [first, second] = [second, first];
+      }
+
+      let self = this;
+      this.classList.toggle(first);
+      setTimeout(() => {
+        self.classList.toggle(second);
+      }, 500)
+    });
   </script>
 
 </body>

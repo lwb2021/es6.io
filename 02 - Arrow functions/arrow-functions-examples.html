@@ -10,7 +10,13 @@
 const race = '100m Dash';
 const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
 
-const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+let win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+console.log(win);
+
+// item, index, array
+win = winners.map(function(winner, index, array) {
+  console.log(winner, index, array);
+});
 
 const ages = [23,62,45,234,2,62,234,62,34];
 
